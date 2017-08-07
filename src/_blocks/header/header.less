@@ -1,0 +1,50 @@
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+
+  padding: 20px 0;
+
+  background: @bg-dark;
+}
+
+.header__wrap {
+  padding: 0 15px;
+
+  .wrap(1060px);
+}
+
+.header__inner {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  min-width: 190px;
+}
+
+@media @s {
+  .header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+
+    padding: 11px 0;
+  }
+
+  .header__logo {
+    width: 130px;
+    min-width: 0;
+
+    flex-shrink: 0;
+    img {
+      max-width: 83px;
+    }
+  }
+}

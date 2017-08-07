@@ -1,0 +1,164 @@
+.gallery {
+  // 
+}
+
+.gallery__wrap {
+  overflow: hidden;
+
+  .wrap;
+}
+
+.gallery__list {
+  position: relative;
+
+  margin-right: -6px;
+  margin-bottom: -6px;
+  &::after {
+    display: table;
+    clear: both;
+
+    content: "";
+  }
+}
+
+.gallery__item {
+  position: relative;
+
+  display: flex;
+  float: left;
+  width: 38.97%;
+  height: 212px;
+  padding: 18px 31px;
+  overflow: hidden;
+
+  border: 6px solid #fff;
+  border-top: 0;
+  border-left: 0;
+
+  transition: padding .3s .5s;
+
+  align-items: center;
+  &--big {
+    width: 61.03%;
+    height: 424px;
+    padding: 18px;
+  }
+  &--right {
+    float: right;
+  }
+  &:hover {
+    .gallery__info {
+      height: 100%;
+
+      transform: translateX(0);
+    }
+    .gallery__descr {
+      filter: blur(0);
+    }
+  }
+}
+
+.gallery__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  img {
+    display: block;
+    max-width: none;
+  }
+}
+
+.gallery__info {
+  position: relative;
+
+  display: flex;
+  width: 100%;
+  height: 1%;
+  overflow: hidden;
+
+  background: rgba(244,245,250,.88);
+
+  transition: .3s transform, .3s height .3s;
+  transform: translateX(-130%);
+
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery__descr {
+  position: relative;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.33;
+  color: @col-orange;
+  text-align: center;
+  text-transform: uppercase;
+
+  transition: .3s filter .4s;
+
+  filter: blur(100px);
+  p {
+    margin: 0;
+  }
+}
+
+@media @t {
+  .gallery__item {
+    height: 150px;
+    &--big {
+      height: 300px;
+    }
+  }
+}
+
+@media (max-width:768px) {
+  @media @l {
+    .gallery__item {
+      height: 120px;
+      &--big {
+        height: 240px;
+      }
+    }
+    .gallery__descr {
+      font-size: 14px;
+      line-height: 1.33;
+    }
+  }
+  @media @p {
+    .gallery__list {
+      display: flex;
+      margin: 0;
+
+      flex-wrap: wrap;
+    }
+    .gallery__item {
+      float: none;
+      width: 50%;
+      height: 44vw;
+      padding: 10px;
+
+      border: 0;
+      &--big {
+        width: 50%;
+      }
+      &--right {
+        float: none;
+      }
+    }
+
+    .gallery__img {
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .gallery__descr {
+      font-size: 12px;
+      line-height: 1.33;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+<section class="popup" id="popup-form">
+  <div class="popup__inner">
+    <div class="popup__wrap">
+      <button type="button" class="popup__close">
+        Close
+        <svg width="24" height="24">
+          <use xlink:href="#icon-cross" />
+        </svg>
+      </button>
+      <h2 class="popup__title">Questions or comments?</h2>
+      <div class="popup__descr">
+        <p>Just fill in send us a form</p>
+      </div>
+      <form class="form" action="/echo" method="POST" id="feedback">
+        <fieldset class="form__field">
+          <label class="form__label">
+            <span class="form__label-text">Name*</span>
+            <span class="form__input-wrap">
+              <input type="text" class="form__input" name="name" title="Name must be longer than 2 symbols" required>
+              <strong class="form__icon-wrap">
+                <svg width="22" height="22">
+                  <use xlink:href="#icon-user" />
+                </svg>
+              </strong>
+            </span>
+          </label>
+        </fieldset>
+        <fieldset class="form__field">
+          <label class="form__label">
+            <span class="form__label-text">Phone*</span>
+            <span class="form__input-wrap">
+              <input type="tel" class="form__input" name="tel" title="Phone must have format +X (XXX) XXX XX XX" required>
+              <span class="form__icon-wrap">
+                <svg width="22" height="22">
+                  <use xlink:href="#icon-phone" />
+                </svg>
+              </span>
+            </span>
+          </label>
+        </fieldset>
+        <fieldset class="form__field">
+          <label class="form__label">
+            <span class="form__label-text">Email*</span>
+            <span class="form__input-wrap">
+              <input type="email" class="form__input" name="email" required>
+              <span class="form__icon-wrap">
+                <svg width="22" height="22">
+                  <use xlink:href="#icon-email" />
+                </svg>
+              </span>
+            </span>
+          </label>
+        </fieldset>
+        <fieldset class="form__field">
+          <label class="form__label">
+            <span class="form__label-text">Message</span>
+            <span class="form__input-wrap">
+              <textarea class="form__input form__input--textarea" name="message"></textarea>
+              <span class="form__icon-wrap">
+                <svg width="22" height="22">
+                  <use xlink:href="#icon-message" />
+                </svg>
+              </span>
+            </span>
+          </label>
+        </fieldset>
+        <fieldset class="form__field">
+          <button type="submit" class="btn form__btn btn-animation">Send</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,170 @@
+.case {
+  padding: 42px 0;
+}
+
+.case__wrap {
+  .wrap;
+  overflow: hidden;
+}
+
+.case__title {
+  .title(0 0 32px);
+}
+
+.case__list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  background: url(/img/index/case/bg_1170.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  margin-right: -6px;
+  margin-bottom: -6px;
+}
+
+.case__item {
+  width: 33.333333%;
+  height: 212px;
+  border: 6px solid #fff;
+  border-top: 0;
+  border-left: 0;
+}
+
+.case__link {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  overflow: hidden;
+  polygon,
+  path,
+  circle {
+    transition: 0.5s;
+  }
+  img {
+    height: 70%;
+  }
+  &:not(:hover) {
+    polygon,
+    path,
+    circle {
+      fill: #fff;
+    }
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.5);
+    opacity: 0;
+    transition: 0.5s;
+  }
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+  }
+  svg {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+.case__btn {
+  font-size: 12px;
+  border: 1px solid @col-orange;
+  color: @col-orange;
+  letter-spacing: 0.025em;
+  display: none;
+  max-width: 128px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 6px 10px;
+  transition: .5s;
+  &--open {
+    background: @col-orange;
+    color: @col-light;
+  }
+}
+
+@media @t {
+  .case__wrap {
+    max-width: 804px;
+  }
+
+  .case__item {
+    width: 50%;
+  }
+
+  .case__list {
+    background-image: url(/img/index/case/bg_1024.jpg);
+  }
+}
+
+@media @s {
+  .case {
+    padding: 27px 0 20px;
+  }
+
+  .case__wrap {
+    padding: 0;
+  }
+
+  .case__title {
+    margin-bottom: 10px;
+  }
+
+  .case__descr {
+    padding: 0 20px;
+    font-size: 14px;
+    line-height: 1.29;
+    margin: 0 0 48px;
+    text-align: center;
+    p {
+      margin: 0;
+      letter-spacing: 0.025em;
+    }
+  }
+
+  .case__list {
+    margin-bottom: 10px;
+    background-image: url(/img/index/case/bg_767l.jpg);
+  }
+
+  .case__item {
+    height: 120px;
+  }
+}
+
+@media @480 {
+  .case__list {
+    @media @l {
+      background-image: url(/img/index/case/bg_412l.jpg);
+    }
+    @media @p {
+      background-image: url(/img/index/case/bg_412p.jpg);
+      max-width: 320px;
+      margin: 0 auto 16px;
+    }
+  }
+  .case__item {
+    @media @p {
+      width: 100%;
+      &--hide {
+        display: none;
+      }
+      border: 0;
+      height: 140px;
+    }
+  }
+
+  .case__btn {
+    @media @p {
+      display: block;
+    }
+  }
+}

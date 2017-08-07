@@ -1,0 +1,15 @@
+.title(@margin: 0; @color: @col; @font-size: 30px; @line-height: 1.2; @align: center) {
+  margin: @margin;
+
+  font-size: @font-size;
+  font-weight: 400;
+  line-height: @line-height;
+  color: @color;
+  text-align: @align;
+  letter-spacing: .025em;
+  text-transform: uppercase;
+  @media @s {
+    font-size: 18px;
+    line-height: 1;
+  }
+}

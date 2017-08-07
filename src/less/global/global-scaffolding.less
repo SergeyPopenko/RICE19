@@ -1,0 +1,48 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+
+  font-size: @font-size-global;
+}
+body {
+  height: 100%;
+  min-height: 100%;
+  padding-top: 65px;
+
+  background: @bg;
+
+  font: 1rem/1 "ProximaNovaCondensed", "Helvetica", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
+  color: @col;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.body-popup {
+  overflow: hidden;
+}
+
+.hidden {
+  @media @t-m {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    visibility: hidden;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+  }
+}
+
+@media @s {
+  body {
+    padding-top: 47px;
+  }
+}

@@ -1,0 +1,35 @@
+.social-links {
+  display: flex;
+  min-width: 190px;
+}
+
+.social-links__link {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+
+  font-size: 0;
+  color: inherit;
+  text-decoration: none;
+  &:last-child {
+    margin-right: 0;
+  }
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    fill: @col-light;
+  }
+}
+
+@media @s {
+  .social-links {
+    min-width: 0;
+  }
+  .social-links__link {
+    width: 19px;
+    height: 19px;
+    margin-right: 7px;
+  }
+}
