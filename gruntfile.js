@@ -52,9 +52,9 @@ module.exports = function(grunt) {
           },
           {
             expand: true,
-            cwd: "src/img/",
-            src: ["favicon"],
-            dest: "build/img/"
+            cwd: "src/img/favicon",
+            src: ["**"],
+            dest: "build/img/favicon"
           }
         ]
       },
